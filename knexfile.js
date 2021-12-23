@@ -1,4 +1,5 @@
 // Update with your config settings.
+require("dotenv").config();
 
 module.exports = {
   client: 'pg',
@@ -14,4 +15,9 @@ module.exports = {
   },
 };
 
-
+//*********************** */
+//following lines configure all requests coming from and going to app.js file into knex
+// const config = require('../knexfile');
+// this instantiates knex with the config argument
+// const knex = require('knex')(config);
+//added to index.js on lines 6 and 7

@@ -17,7 +17,7 @@ npm install express
 
 npm install knex
 npx knex init
-configure knex
+configure knex file
 
 ### Migrations
 

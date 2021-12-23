@@ -1,7 +1,10 @@
 require("dotenv").config();
 const { application } = require("express");
 const app = require("./app"); 
-const db = require("./knex");
+
+const config = require('../knexfile');
+const db = require('knex')(config);
+
 
 const PORT = process.env.PORT || 4000;
 
@@ -16,7 +19,7 @@ const PORT = process.env.PORT || 4000;
         );
         
     } catch (error) {
-        console.error("Error starting app", err);
+        console.error("Error starting app", error);
         process.exit(-1);
     }
 })();

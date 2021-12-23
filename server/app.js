@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const db = require("./knex");
+const db = require("../knexfile");
 
 const app = express();
 app.use(express.json());
