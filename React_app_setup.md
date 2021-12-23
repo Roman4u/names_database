@@ -2,18 +2,18 @@
 
 https://reactjs.org/docs/create-a-new-react-app.html
 
-## Installing front end: React
+## Front end: React
 
 npx create-react-app app-name
 cd into app repo
 npm install
 npm start
 
-## Installing server
+## Server
 
 npm install express
 
-## Setting up backend
+## Backend
 
 npm install knex
 npx knex init
@@ -28,7 +28,18 @@ npm run migrate <initial-migration>
 add migrate script to pachage.json
 "latest": "knex migrate:latest"
 
-## Configure environmental variables
+### Seeds
+
+add create seed and seeding scripts to package.json
+add db.seed.run() to index.js 
+
+## Environmental variables config
 
 npm install dotenv
 create .env file and
+
+## API endpoints
+
+Bring in the knex config
+app.use(express.json());
+Create get request
